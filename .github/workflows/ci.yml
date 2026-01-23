@@ -1,0 +1,16 @@
+name: First GitHub Runner Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello! This is running on a GitHub-hosted VM"
